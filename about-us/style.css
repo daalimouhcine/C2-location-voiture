@@ -1,38 +1,377 @@
+/* ----- change the default style of the browser */
 * {
     margin:0;
+    padding:0;
     box-sizing: border-box;
+    font-family: montserrat;
 }
 li {
     list-style-type: none;
 }
-body {
-    background-color:white;
+a {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+}
+/* ----------------------------------------------- */
+
+/* start the heading section style */
+header {
+    background: url(images/head.jpg) no-repeat right;
+    background-size:45.1vw 870px ; 
+    width: 100%;
+    height: 100vh;
 }
 
-header {
-    background: url(images/head.jpg) no-repeat;
-
+/* style the navigation menu */
+header nav {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 80vw;
+    margin:0px auto;
+    
 }
 header nav img {
     width: 120px;
     height: 80px;
+    margin-top: 5px;
 }
-header nav {
+header nav .nav-container {
     display:flex;
-    flex-direction:row;
+    justify-content: space-around;
 }
-header nav ul {
+header nav .nav-container ul {
     display: flex;
-    flex-direction: row;
 }
-header nav ul li {
+header nav .nav-container .menu-bar {
+    margin:0 5vw;
+}
+header nav .nav-container .menu-bar .menu-item {
     margin:5px 10px;
     padding: 5px 10px;
 }
-header nav ul li a {
+header nav .menu-bar .menu-item a {
     text-decoration: none;
     color:rgb(10, 10, 10);
-    font-family: montserrat;
-    font-weight:medium;
     font-size:20px;
+}
+header nav .menu-bar .b a {color:rgb(10, 10, 10);}
+header nav .menu-bar .w a {color: white;}
+
+header nav .nav-container .log li {
+    margin:0px 10px;
+}
+header nav .nav-container .log .in a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size:15px;
+    background-color: #111;
+    border: 1px solid white;
+    border-radius:10px;
+    display: flex;
+    width: 80px;
+    height: 50px;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+}
+header nav .nav-container .log .up a {
+    text-decoration: none;
+    color:rgb(10, 10, 10);
+    font-size:15px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius:10px;
+    display:flex;
+    width:80px;
+    height:50px;
+    align-items:center;
+    justify-content:center;
+}
+
+/* style the heading content */
+
+header .head-par {
+    width: 50vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:center;
+    margin-top: 30px;
+}
+header .head-par p {
+    padding-left:30px;
+    font-size: 35px;
+    font-weight: 500;
+}
+header .head-par a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: flex-end;
+    width: 150px;
+    height:70px;
+    background-color: rgb(10, 10, 10);
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;   
+    transition:background linear 200ms;
+}
+header .head-par a:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+
+
+/* style the brands section */
+.brands {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+.brands h3 {
+    text-transform: uppercase;
+    font-size:48px;
+    margin:50px 0;
+}
+.brands .brand-img {
+    width: 100%;
+    height:500px;
+    background: url(images/car-brands.jpg) no-repeat top;
+    background-size:1050 650;
+}
+
+
+
+/* style the information section */
+.info {
+    background-color: black;
+    height: fit-content;
+    margin: 30px 0;
+    padding: 50px 0 150px;
+}
+.info .parti-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 0;
+}
+.info .parti-1 p {
+    width: 60%;
+    height: fit-content;
+    color: white;
+    font-size:30px;
+    font-weight:200;
+    line-height: 200%;
+}
+.info .parti-1 .info-img {
+    width: 30%;
+    height:290px;
+    background: url(images/info-car.jpg) no-repeat;
+    background-size: 100% 290px;
+    border-radius: 40px;
+}
+/*---------------------------------------------*/
+.parti-2 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin: 0px 0 100px;
+}
+.parti-2 div {
+    display: flex;
+    flex-direction:column;
+    width: 20%;
+}
+.parti-2 div h4 {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+.parti-2 div b {
+    font-size: 20px;
+    font-weight: 400;
+    color:#9b9b9b;
+    margin: 5px 0;
+}
+.parti-2 div a {
+    width: 90px;
+    height:90px;
+    font-family:sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    border: 2px solid white;
+    border-radius:5px;
+}
+/*---------------------------------------------*/
+
+
+.gallery-parti {
+    width: 1345px;
+    height: 470px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+.gallery-parti .b {
+    background-color: rgb(179, 179, 179);
+}
+
+.g1 {
+    background:url(images/car4.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 1/3;
+    grid-row: 1/4;
+}
+.g2 {
+    background:url(images/car5.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.g3 {
+    grid-column: 4/5;
+    grid-row: 1/2;   
+}
+.g4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.g5 {
+    background:url(images/car1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+.g6 {
+    background:url(images/car.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 5/7;
+    grid-row: 1/5;
+}
+.g7 {
+    background:url(images/m1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 7/9;
+    grid-row: 1/2;
+}
+.g8 {
+    background:url(images/t1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 9/12;
+    grid-row: 1/3;
+}
+.g9 {
+    background:url(images/m7.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column:1/3;
+    grid-row:4/5;
+}
+.g10 {
+    background:url(images/c1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+.g11 {
+    grid-column: 7/9;
+    grid-row: 2/4;
+}
+.g12 {
+    background:url(images/m7.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 7/9;
+    grid-row: 4/5;
+}
+.g13 {
+    background:url(images/car3.jpg) no-repeat center;
+    background-size: 100% 100%;
+    grid-column: 9/12;
+    grid-row: 3/5;
+}
+
+
+
+
+/* style the People section */
+
+.people {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin: 100px 0;
+}
+.people h3 {
+    text-transform: uppercase;
+    font-size:48px;
+    margin: 50px 0;
+}
+.people .people-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.people .people-container div {
+    width: 22%;
+    height: fit-content;
+    margin: 30px 0;
+}
+.people .people-container div img {
+    width: 210px;
+    height: 210px;
+    border-radius: 150px;
+}
+.people .people-container div h5 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+
+
+/* style the Footer section */
+
+
+
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 15px 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer a img[alt="logo"] {
+    width: 140px;
+    height: 100px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+}
+footer div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+footer div a, footer div p {
+    color:white;
+}
+footer a img[alt="instagram-icon"] {
+    width: 75px;
+    height: 75px;
 }
