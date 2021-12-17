@@ -150,6 +150,7 @@ header .head-par a:hover {
 /* style the information section */
 .info {
     background-color: black;
+    width: 100%;
     height: fit-content;
     margin: 30px 0;
     padding: 50px 0 150px;
@@ -180,13 +181,15 @@ header .head-par a:hover {
 .parti-2 {
     display: flex;
     flex-direction:row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0px 0 100px;
 }
 .parti-2 div {
     display: flex;
     flex-direction:column;
-    width: 20%;
+    min-width: 20%;
+    margin: 40px 30px;
 }
 .parti-2 div h4 {
     font-size: 30px;
@@ -212,17 +215,25 @@ header .head-par a:hover {
     color:white;
     border: 2px solid white;
     border-radius:5px;
+    transition: filter 200ms linear;
+}
+.parti-2 div a:hover {
+    filter: blur(3px);
 }
 /*---------------------------------------------*/
 
 
 .gallery-parti {
-    width: 1345px;
-    height: 470px;
-    display: grid;
+    width: 100%;
+    height: fit-content;
+    display: inline-grid;
     grid-gap: 10px;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: 8vw 8vw 8vw 9vw ;
+}
+.gallery-parti div {
+    width: 100%;
+    height: 100%;
 }
 .gallery-parti .b {
     background-color: rgb(179, 179, 179);
@@ -324,9 +335,9 @@ header .head-par a:hover {
     justify-content: space-around;
 }
 .people .people-container div {
-    width: 22%;
+    min-width: 22%;
     height: fit-content;
-    margin: 30px 0;
+    margin: 30px 10px;
 }
 .people .people-container div img {
     width: 210px;
@@ -374,4 +385,160 @@ footer div a, footer div p {
 footer a img[alt="instagram-icon"] {
     width: 75px;
     height: 75px;
+}
+
+
+@media screen and (max-width: 1200px){
+    /* style the heading content */
+
+    header .head-par {
+        width: 50vw;
+        height: 600px;
+    }
+    header .head-par p {
+        font-size: 30px;
+    }
+    header .head-par a {
+        width: 130px;
+        height:60px;
+        margin-top: 50px;
+        font-size: 18px;   
+    }
+
+    .brands h3 {
+        font-size:40px;
+    }
+
+    .people h3 {
+        font-size:40px;
+    }
+
+
+    
+    .parti-2 div a {
+        width: 70px;
+        height:70px;
+        font-size: 30px;
+    }
+    .parti-2 div h4 {
+        font-size: 28px;
+    }
+    .parti-2 div b {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    header {
+        background: url(images/head.jpg) no-repeat right;
+        background-size:50vw 870px ; 
+        width: 100%;
+        height: 100vh;
+    }
+    header nav img {
+        width: 100px;
+        height: 70px;
+        margin-top: 5px;
+    }
+    header nav .nav-container .menu-bar {
+        margin:0 2vw;
+    }
+
+    header nav .nav-container .menu-bar .menu-item a {
+        text-decoration: none;
+        font-size:18px;
+    }
+    
+    header nav .nav-container .log .in a {
+        font-size:13px;
+        width: 70px;
+        height: 40px;
+    }
+    header nav .nav-container .log .up a {
+        font-size:13px;
+        width: 70px;
+        height: 40px;
+    }
+
+
+    header .head-par {
+        width: 45vw;
+        height: 600px;
+    }
+    header .head-par p {
+        font-size: 28px;
+    }
+    header .head-par a {
+        width: 110px;
+        height:50px;
+        margin-top: 50px;
+        font-size: 16px;   
+    }
+
+    
+    .info .parti-1 p {
+        width: 60%;
+        font-size:28px;
+        line-height: 170%;
+    }
+    .info .parti-1 .info-img {
+        width: 30%;
+        height:270px;
+        background-size: 100% 250px;
+    }
+
+        
+    .parti-2 div {
+        margin: 30px 30px;
+    }
+    .parti-2 div a {
+        width: 60px;
+        height:60px;
+        font-size: 28px;
+    }
+    .parti-2 div h4 {
+        font-size: 26px;
+    }
+    .parti-2 div b {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .people .people-container div img {
+        width: 190px;
+        height: 190px;
+    }
+    .people .people-container div h5 {
+        font-size: 26px;
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    footer a img[alt="logo"] {
+        width: 120px;
+        height: 80px;
+        background-color: black;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    footer div {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    footer a img[alt="instagram-icon"] {
+        width: 60px;
+        height: 60px;
+    }
+    
 }
