@@ -55,6 +55,12 @@ header nav .menu-bar .menu-item a {
     text-decoration: none;
     color:rgb(10, 10, 10);
     font-size:20px;
+    transition: all linear 200ms;
+}
+header nav .menu-bar .menu-item a:hover {
+    text-shadow: 0px 0px 0 rgb(88, 88, 88), 1px 1px 0 rgb(5, 5, 5),
+    2px 2px 0 rgb(0, 0, 0), 3px 3px 0 rgb(2, 2, 2), 4px 4px 0 rgb(231, 229, 227),
+    5px 5px 0 rgb(82, 81, 81), 6px 6px 0 rgb(14, 14, 13);
 }
 header nav .menu-bar .b a {color:rgb(10, 10, 10);}
 header nav .menu-bar .w a {color: white;}
@@ -90,6 +96,9 @@ header nav .nav-container .log .up a {
     justify-content:center;
 }
 
+.mobile-menu {
+    display: none;
+}
 /* style the heading content */
 
 header .head-par {
@@ -548,6 +557,20 @@ footer a img[alt="instagram-icon"] {
         border-radius: 5px;
     }
     
+    header .head-par {
+        width: 45vw;
+        height: fit-content;
+    }
+    header .head-par p {
+        font-size: 24px;
+    }
+    header .head-par a {
+        width: 90px;
+        height:40px;
+        margin-top: 40px;
+        font-size: 14px;   
+    }
+    
 
     .info .parti-1 {
         padding: 50px 0;
@@ -595,4 +618,64 @@ footer a img[alt="instagram-icon"] {
     }
     
 }
-@media screen and (max-width: 660px) {header nav .nav-container .menu-bar {margin:0 3vw;}}
+@media screen and (max-width: 660px) {header nav .nav-container .menu-bar {margin:0 3vw;}} 
+
+@media screen and (max-width: 645px){
+    header nav {
+        justify-content: space-evenly;
+    }
+    header nav .nav-container .log , header nav .nav-container .menu-bar {
+        display: none;
+    }
+    .mobile-menu {
+        display:block;
+        width: 50px;
+        height: 50px;
+    }
+
+    header .head-par {
+        width: 45vw;
+        height: fit-content;
+    }
+    header .head-par p {
+        font-size: 20px;
+    }
+    header .head-par a {
+        width: 90px;
+        height:40px;
+        margin-top: 30px;
+        font-size: 12px;   
+    }
+
+    .brands h3 {
+        font-size: 30px;
+    }
+    .brands .brand-img {
+        width: 100%;
+        height:500px;
+        background: url(images/car-brands.jpg) no-repeat top;
+        background-size:90vw 70vw;
+    }
+
+
+    .people h3 {
+        font-size: 30px;
+    }
+    .people .people-container div img {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    footer div {
+        font-size: 12px;
+    }
+    footer a img[alt="instagram-icon"] {
+        width: 40px;
+        height: 40px;
+    }
+    footer a img[alt="logo"] {
+        width: 90px;
+        height: 60px;
+    }
+}
